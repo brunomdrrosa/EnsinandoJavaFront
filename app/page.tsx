@@ -6,7 +6,6 @@ export default function Home() {
   return (
     <div className="page-container">
       <Header />
-      {/* Restante do código permanece igual */}
       <h2 className="learning-title">O que vou aprender?</h2>
       <section className="learning-section">
         <div className="icons-container">
