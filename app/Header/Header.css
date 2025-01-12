@@ -1,0 +1,64 @@
+.hero-section {
+  background-color: #141318;
+  padding: 40px;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+.text-container {
+  max-width: 600px;
+}
+
+.title {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #A8A8A8;
+}
+
+.buttons {
+  margin-top: 30px;
+}
+
+.start-button, .learn-more-button {
+  font-weight: 600;
+  padding: 15px 30px;
+  margin-right: 1rem;
+  font-size: 1.4rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+  color: #ffffff;
+}
+
+.start-button {
+  background-color: #ff9900;
+}
+
+.learn-more-button {
+  background-color: #B30839;
+}
+
+.start-button:hover, .learn-more-button:hover {
+  opacity: 0.8;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 50%;
+  pointer-events: none;
+}
