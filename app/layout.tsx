@@ -32,9 +32,9 @@ export const metadata: Metadata = {
     siteName: "Ensinando Java",
     images: [
       {
-        url: "https://i.imgur.com/bpZwfE1.png",
-        width: 256,
-        height: 256,
+        url: "https://i.imgur.com/UoHBPzR.png",
+        width: 1200,
+        height: 600,
         alt: "Ensinando Java",
       },
     ],
