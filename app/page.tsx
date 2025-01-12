@@ -17,6 +17,20 @@ export default function Home() {
           <StackImage imageUrl="stacks/lombok.webp" backgroundColor="#FFFFFF" altText="Lombok" backgroundSize="60%" />
           <StackImage imageUrl="stacks/hibernate.webp" backgroundColor="#FFFFFF" altText="Hibernate" backgroundSize="50%" />
           <StackImage imageUrl="stacks/postgresql.webp" backgroundColor="#336791" altText="PostgreSQL" backgroundSize="50%" />
+          <StackImage imageUrl="stacks/mongo.webp" backgroundColor="#13AA52" altText="MongoDB" backgroundSize="75%" />
+          <StackImage imageUrl="stacks/junit.webp" backgroundColor="#FFFFFF" altText="JUnit" backgroundSize="55%" />
+          <StackImage imageUrl="stacks/flyway.webp" backgroundColor="#CC0000" altText="Flyway" backgroundSize="75%" />
+          <StackImage imageUrl="stacks/liquibase.webp" backgroundColor="#2962FF" altText="Liquibase" backgroundSize="55%" />
+          <StackImage imageUrl="stacks/swagger.webp" backgroundColor="#85EA2D" altText="Swagger" backgroundSize="75%" />
+          <StackImage imageUrl="stacks/openapi.webp" backgroundColor="#FFFFFF" altText="OpenAPI" backgroundSize="60%" />
+          <StackImage imageUrl="stacks/sonarqube.webp" backgroundColor="#FFFFFF" altText="SonarQube" backgroundSize="70%" />
+          <StackImage imageUrl="stacks/kafka.webp" backgroundColor="#262E32" altText="Kafka" backgroundSize="50%" />
+          <StackImage imageUrl="stacks/rabbitmq.webp" backgroundColor="#F76300" altText="RabbitMQ" backgroundSize="50%" />
+          <StackImage imageUrl="stacks/docker.webp" backgroundColor="#0091E2" altText="Docker" backgroundSize="75%" />
+          <StackImage imageUrl="stacks/elk.webp" backgroundColor="#FFFFFF" altText="ELK Stack" backgroundSize="75%" />
+          <StackImage imageUrl="stacks/graphql.webp" backgroundColor="#D90071" altText="GraphQL" backgroundSize="60%" />
+          <StackImage imageUrl="stacks/quarkus.webp" backgroundColor="#4695EB" altText="Quarkus" backgroundSize="60%" />
+          <StackImage imageUrl="stacks/micronaut.webp" backgroundColor="#000000" altText="Micronaut" backgroundSize="85%" />
         </div>
       </section>
 
