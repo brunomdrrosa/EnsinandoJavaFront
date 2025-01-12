@@ -29,13 +29,12 @@ export const metadata: Metadata = {
     title: "Ensinando Java",
     description:
       "Aprenda programação em Java com tutoriais simples e práticos! Desde conceitos básicos até projetos avançados.",
-    url: "https://ensinando-java.vercel.app/",
     siteName: "Ensinando Java",
     images: [
       {
         url: "https://i.imgur.com/bpZwfE1.png",
-        width: 1000,
-        height: 1000,
+        width: 256,
+        height: 256,
         alt: "Ensinando Java",
       },
     ],
