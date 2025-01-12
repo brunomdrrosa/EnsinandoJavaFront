@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     type: "website",
   },
   icons: {
-    icon: "/favicon.ico"
+    icon: "/icon.ico"
   },
   robots: {
     index: true,

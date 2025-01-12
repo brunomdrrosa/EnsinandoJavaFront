@@ -17,7 +17,7 @@ const StackImage: React.FC<StackImageProps> = ({ imageUrl, backgroundColor, altT
     display: 'flex',
     flexDirection: flexDirection, // Usando const assertion
     alignItems: alignItems, // Usando const assertion
-    marginLeft: '2rem',
+    // marginLeft: '2rem',
   };
 
   const rectangleStyle: React.CSSProperties = {

@@ -6,9 +6,15 @@
   font-weight: 700;
 }
 
-.learning-section, 
-.why-java-section, 
-.pricing-section, 
+@media (max-width: 375px) {
+  .learning-title {
+    font-size: 24px;
+  }
+}
+
+.learning-section,
+.why-java-section,
+.pricing-section,
 .faq-section {
   display: flex;
   justify-content: center;
@@ -19,21 +25,19 @@
 }
 
 @media (min-width: 1024px) {
-  .learning-section, 
-  .why-java-section, 
-  .pricing-section, 
-  .faq-section {
-    padding-left: 200px;
-    padding-right: 200px;
+  .learning-section {
+    /* padding-left: 200px;
+    padding-right: 200px; */
   }
 }
 
-.icons-container,
-.plans-container,
-.reasons-container {
+.icons-container {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
+  max-width: 1200px;
+  gap: 1rem;
 }
 
 .plan {
