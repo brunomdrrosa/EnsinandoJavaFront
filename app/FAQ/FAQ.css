@@ -29,7 +29,7 @@ summary:hover {
   color: #ff9900; /* Cor ao passar o mouse */
 }
 
-p {
+.answer {
   text-align: justify;
   font-weight: 400;
   font-size: 18px;
