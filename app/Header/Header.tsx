@@ -1,7 +1,23 @@
+'use client';
+
 import React from 'react';
 import './Header.css';
 
 const Header = () => {
+  const scrollToFAQ = () => {
+    const faqSection = document.getElementById("faq-title");
+
+    if (faqSection) {
+      const offset = 50; // Distância adicional para ajustar a posição (valor negativo)
+      const position = faqSection.getBoundingClientRect().top + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: position,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <header className="hero-section">
       <div className="hero-content">
@@ -13,7 +29,7 @@ const Header = () => {
           </p>
           <div className="buttons">
             <button className="start-button">Começar</button>
-            <button className="learn-more-button">Saiba mais</button>
+            <button className="learn-more-button" onClick={scrollToFAQ}>Saiba mais</button>
           </div>
         </div>
         <img 

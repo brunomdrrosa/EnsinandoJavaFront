@@ -30,6 +30,7 @@ summary:hover {
 }
 
 p {
+  text-align: justify;
   font-weight: 400;
   font-size: 18px;
   margin-top: 0.5rem;
@@ -53,5 +54,26 @@ details:not([open]) summary::before {
   .faq-section {
     padding-left: 10%;
     padding-right: 10%;
+  }
+}
+
+.faq-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 435px) {
+  .faq-title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 380px) {
+  .faq-title {
+    font-size: 24px;
   }
 }
