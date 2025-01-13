@@ -1,13 +1,16 @@
 import React from 'react';
 
 interface StackImageProps {
-  imageUrl: string; // URL da imagem que você deseja exibir
-  backgroundColor: string; // Cor de fundo que você deseja aplicar
-  altText: string; // Texto alternativo para a imagem
-  backgroundSize?: string; // Tamanho do background, parâmetro opcional
+  imageUrl: string;
+  backgroundColor: string;
+  altText?: string;
+  backgroundSize: string;
+  width?: string;
+  height?: string;
 }
 
-const StackImage: React.FC<StackImageProps> = ({ imageUrl, backgroundColor, altText, backgroundSize = '40%' }) => {
+const StackImage: React.FC<StackImageProps> = ({ imageUrl, backgroundColor, altText, backgroundSize, width = '100px',
+  height = '75px', }) => {
   // Definindo valores com const assertion
   const flexDirection = 'column' as const;
   const alignItems = 'center' as const;
@@ -26,8 +29,8 @@ const StackImage: React.FC<StackImageProps> = ({ imageUrl, backgroundColor, altT
     backgroundSize: backgroundSize, // Usando a propriedade backgroundSize
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
-    width: '100px',
-    height: '75px',
+    width: width, // Aplica largura customizada ou padrão
+    height: height, // Aplica altura customizada ou padrão
     borderRadius: '8px',
   };
 
@@ -42,7 +45,7 @@ const StackImage: React.FC<StackImageProps> = ({ imageUrl, backgroundColor, altT
   return (
     <div style={containerStyle}>
       <div style={rectangleStyle}></div>
-      <span style={textStyle}>{altText}</span>
+      {altText && <span style={textStyle}>{altText}</span>}
     </div>
   );
 };
