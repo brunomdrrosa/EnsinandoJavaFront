@@ -1,19 +1,17 @@
-import "./App.css";
-import Header from "./Header/Header";
-import StacksSection from "./StacksSection/StacksSection";
-import Advantages from "./Advantages/Advantages";
+import "./Advantages.css";
 
-export default function Home() {
+import { PiChartLineUpFill } from "react-icons/pi";
+import { PiCurrencyDollarFill } from "react-icons/pi";
+import { BsFillSuitcaseLgFill } from "react-icons/bs";
+
+const Advantages = () => {
   return (
-    <div className="page-container">
-      <Header />
-      <StacksSection />
-      <Advantages />
-<h2 className="reason-title">Quais são os custos?</h2>
+    <>
+      <h2 className="reason-title">Por que escolher Java?</h2>
       <div className="reasons-container">
-        <div className="card-prices">
-          <p className="title-reason">PLANO GRÁTIS</p>
-          <p className="title-reason">R$ 0,00</p>
+        <div className="card">
+          <BsFillSuitcaseLgFill size={50} />
+          <p className="title-reason">Alta demanda no mercado de trabalho</p>
           <p className="description">
             Java é uma das linguagens de programação mais requisitadas pelas
             empresas em diversos setores, como fintechs, saúde, e-commerce, e
@@ -23,9 +21,9 @@ export default function Home() {
             de grande escala.
           </p>
         </div>
-        <div className="card-prices">
-        <p className="title-reason">PLANO MENSAL</p>
-        <p className="title-reason">R$ 19,90</p>
+        <div className="card">
+          <PiCurrencyDollarFill size={64} />
+          <p className="title-reason">Remuneração competitiva</p>
           <p className="description">
             Desenvolvedores Java são altamente valorizados no mercado, com
             salários competitivos em comparação com outras linguagens. A demanda
@@ -34,9 +32,9 @@ export default function Home() {
             quem deseja crescer na carreira de TI.
           </p>
         </div>
-        <div className="card-prices">
-        <p className="title-reason">PLANO TRIMESTRAL</p>
-        <p className="title-reason">R$ 44,90</p>
+        <div className="card">
+          <PiChartLineUpFill size={64} />
+          <p className="title-reason">Estabilidade e futuro promissor</p>
           <p className="description">
             Java é uma linguagem madura com mais de 25 anos de história, e sua
             popularidade continua forte no mercado. Empresas que utilizam Java
@@ -46,23 +44,8 @@ export default function Home() {
           </p>
         </div>
       </div>
-
-      <section className="faq-section">
-        <h2>Perguntas frequentes</h2>
-        <ul>
-          <li>Para quem é indicado o curso?</li>
-          <li>Preciso ter conhecimento prévio em programação?</li>
-          {/* Continue adicionando perguntas conforme necessário */}
-        </ul>
-      </section>
-
-      <footer className="footer">
-        <h3>Ensinando Java</h3>
-        <div className="social-icons">
-          {/* Substitua com links reais para redes sociais */}
-          <span>Instagram</span> <span>LinkedIn</span>
-        </div>
-      </footer>
-    </div>
+    </>
   );
-}
+};
+
+export default Advantages;
