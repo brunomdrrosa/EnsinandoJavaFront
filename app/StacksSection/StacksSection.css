@@ -1,0 +1,31 @@
+.learning-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+@media (max-width: 375px) {
+  .learning-title {
+    font-size: 24px;
+  }
+}
+
+.learning-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.icons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 900px;
+  gap: 1rem;
+}
