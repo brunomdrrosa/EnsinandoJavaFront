@@ -112,7 +112,13 @@
 }
 
 @media (max-width: 850px) {
+  .hero-content {
+    flex-direction: column-reverse; /* Coloca o conteúdo da logo acima do texto quando a tela é pequena */
+    align-items: center; /* Alinha os itens ao centro */
+  }
+
   .hero-image {
-    display: none;
+    max-width: 150px;
+    margin-bottom: 20px; /* Dê um pequeno espaço entre a logo e o texto */
   }
 }
