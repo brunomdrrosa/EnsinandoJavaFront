@@ -1,27 +1,39 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { JSX, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import './WelcomePage.css';
 import VideoSlider from "../VideoSlider/VideoSlider";
-import { FaJava, FaPython, FaDatabase, FaCogs } from "react-icons/fa";  // Exemplo de ícones
-import { BiLogoMongodb, BiLogoPostgresql } from "react-icons/bi";
 import { SiApachekafka, SiDocker, SiFlyway, SiGraphql, SiJunit5, SiLiquibase, SiMongodb, SiOpenapiinitiative, SiQuarkus, SiRabbitmq, SiSwagger } from "react-icons/si";
 
 // Defina um tipo para as tecnologias
 type Technology = "MongoDB" | "JUnit" | "Flyway" | "Liquibase" | "Swagger" | "OpenAPI" | "Kafka" | "RabbitMQ" | "Docker" | "GraphQL" | "Quarkus";
 
-// Atualize o objeto iconMapping com o tipo correto
 const WelcomePage = () => {
   const router = useRouter();
-  const userName = localStorage.getItem("userName");
+  const [firstName, setFirstName] = useState<string | null>(null);
 
-  const firstName = userName ? userName.split(" ")[0] : null;
-
+  // useEffect para acessar o localStorage apenas no lado do cliente
   useEffect(() => {
-    if (!firstName) {
-      router.push("/"); // Redireciona para a página principal
+    const userName = localStorage.getItem("userName");
+    if (userName) {
+      setFirstName(userName.split(" ")[0]); // Extrair o primeiro nome
+    } else {
+      router.push("/"); // Redireciona para a página principal se o nome não existir
     }
-  }, [firstName, router]);
+  }, [router]);
+
+  // Este useState só é chamado uma vez, independentemente de condições de renderização
+  const [selectedTechnologies, setSelectedTechnologies] = useState<Technology[]>([]);
+
+  const handleTechnologyChange = (tech: Technology) => {
+    setSelectedTechnologies((prevSelected) => {
+      if (prevSelected.includes(tech)) {
+        return prevSelected.filter((technology) => technology !== tech);
+      } else {
+        return [...prevSelected, tech];
+      }
+    });
+  };
 
   if (!firstName) {
     return null;
@@ -153,28 +165,13 @@ const WelcomePage = () => {
     },
   ];
 
-  // Alterar para um estado que armazena um array de tecnologias selecionadas
-  const [selectedTechnologies, setSelectedTechnologies] = useState<Technology[]>([]);
-
-  const handleTechnologyChange = (tech: Technology) => {
-    setSelectedTechnologies((prevSelected) => {
-      if (prevSelected.includes(tech)) {
-        // Remove a tecnologia se ela já estiver selecionada
-        return prevSelected.filter((technology) => technology !== tech);
-      } else {
-        // Adiciona a tecnologia à lista de selecionadas
-        return [...prevSelected, tech];
-      }
-    });
-  };
-
   const filteredVideos = selectedTechnologies.length > 0
-    ? allVideos.filter(video => selectedTechnologies.includes(video.technology))
-    : allVideos;
-
+  ? allVideos.filter(video => selectedTechnologies.includes(video.technology))
+  : allVideos;
+  
   const technologies = [...new Set(allVideos.map(video => video.technology))];
 
-  const iconMapping: Record<Technology, any> = {
+  const iconMapping: Record<Technology, JSX.Element> = {
     "MongoDB": <SiMongodb size={48} className="technology-button" style={{ fill: selectedTechnologies.includes("MongoDB") ? "#ff9900" : "white" }} />,
     "JUnit": <SiJunit5 size={48} className="technology-button" style={{ fill: selectedTechnologies.includes("JUnit") ? "#ff9900" : "white" }} />,
     "Flyway": <SiFlyway size={48} className="technology-button" style={{ fill: selectedTechnologies.includes("Flyway") ? "#ff9900" : "white" }} />,
@@ -208,7 +205,6 @@ const WelcomePage = () => {
           ))}
         </div>
       </div>
-
       <VideoSlider videos={filteredVideos} />
     </div>
   );

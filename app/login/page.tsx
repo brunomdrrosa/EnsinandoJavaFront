@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { FaGoogle, FaGithub } from "react-icons/fa";
 import { useRouter } from "next/navigation";
-import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, GoogleAuthProvider, GithubAuthProvider, signInWithPopup } from "firebase/auth";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword, GoogleAuthProvider, GithubAuthProvider, signInWithPopup } from "firebase/auth";
 import { auth } from "../../firebaseConfig"; 
 import "./LoginPage.css";
 
