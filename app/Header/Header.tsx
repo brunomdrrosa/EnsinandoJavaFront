@@ -3,8 +3,15 @@
 import React from 'react';
 import './Header.css';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 const Header = () => {
+  const router = useRouter();
+
+  const handleStartClick = () => {
+    router.push("/login");
+  };
+
   const scrollToFAQ = () => {
     const faqSection = document.getElementById("faq-title");
 
@@ -29,7 +36,7 @@ const Header = () => {
             com conteúdo atualizado e projetos desafiadores no seu ritmo.
           </p>
           <div className="buttons">
-            <button className="start-button">Começar</button>
+            <button className="start-button" onClick={handleStartClick}>Começar</button>
             <button className="learn-more-button" onClick={scrollToFAQ}>Saiba mais</button>
           </div>
         </div>

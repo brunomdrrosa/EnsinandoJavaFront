@@ -9,7 +9,7 @@ body {
 .login-container {
   width: 100%;
   max-width: 600px;
-  margin: 100px auto;
+  margin: 50px auto;
   padding: 40px;
   background-color: #1f1e24;
   border-radius: 12px;
@@ -17,7 +17,7 @@ body {
   text-align: center;
 }
 
-h1 {
+.login-title {
   margin-bottom: 30px;
   color: #ff9900;
 }
@@ -138,4 +138,53 @@ input {
   .external-button {
     flex-direction: column; /* Coloca ícones acima do texto */
   }
+}
+.password-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #ff9900;
+  cursor: pointer;
+}
+
+.password-container {
+  position: relative;
+  width: 100%;
+}
+
+.login-image {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.login-title {
+  color: white;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.forgot-password-button {
+  margin-top: 10px;
+  background: none;
+  color: #007bff;
+  border: none;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.forgot-password-button:hover {
+  color: #0056b3;
 }

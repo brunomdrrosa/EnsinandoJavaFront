@@ -13,34 +13,21 @@ const Advantages = () => {
           <BsFillSuitcaseLgFill size={50} />
           <p className="title-reason">Alta demanda no mercado de trabalho</p>
           <p className="description">
-            Java é uma das linguagens de programação mais requisitadas pelas
-            empresas em diversos setores, como fintechs, saúde, e-commerce, e
-            grandes corporações. Aprender Java abre portas para muitas
-            oportunidades de emprego, desde startups até empresas globais,
-            devido à sua ampla utilização em sistemas corporativos e aplicações
-            de grande escala.
+            Java é uma das linguagens mais requisitadas, sendo amplamente usada em setores como fintechs, saúde e e-commerce. Aprender Java abre muitas oportunidades de emprego, desde startups até grandes corporações, devido à sua aplicação em sistemas corporativos e de grande escala.
           </p>
         </div>
         <div className="card">
           <PiCurrencyDollarFill size={64} />
           <p className="title-reason">Remuneração competitiva</p>
           <p className="description">
-            Desenvolvedores Java são altamente valorizados no mercado, com
-            salários competitivos em comparação com outras linguagens. A demanda
-            constante, especialmente para posições sêniores, resulta em uma
-            remuneração mais elevada, tornando Java uma escolha promissora para
-            quem deseja crescer na carreira de TI.
+          Desenvolvedores Java são bem valorizados, com salários competitivos, especialmente para posições sêniores. A demanda constante por profissionais qualificados resulta em uma remuneração elevada, tornando Java uma boa escolha para quem quer crescer na carreira.
           </p>
         </div>
         <div className="card">
           <PiChartLineUpFill size={64} />
           <p className="title-reason">Estabilidade e futuro promissor</p>
           <p className="description">
-            Java é uma linguagem madura com mais de 25 anos de história, e sua
-            popularidade continua forte no mercado. Empresas que utilizam Java
-            frequentemente adotam soluções de longo prazo, o que proporciona
-            estabilidade e oportunidades para profissionais que buscam uma
-            carreira sólida, com espaço para evolução e aprendizado contínuo.
+          Java, com mais de 25 anos de uso, permanece uma escolha sólida para empresas que buscam soluções duradouras. Sua confiabilidade garante aos profissionais estabilidade na carreira, além de oportunidades constantes para aprendizado e crescimento no mercado de TI.
           </p>
         </div>
       </div>

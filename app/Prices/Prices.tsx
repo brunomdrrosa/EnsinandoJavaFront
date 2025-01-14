@@ -1,8 +1,17 @@
+'use client';
+
 import React from 'react';
 import StackImage from "../StackImage/StackImage";
 import './Prices.css';
+import { useRouter } from 'next/navigation';
 
 const Prices = () => {
+  const router = useRouter();
+
+  const handleStartClick = () => {
+    router.push("/login");
+  };
+
   return <>
     <h2 className="reason-title">Quais são os custos?</h2>
     <div className="reasons-container">
@@ -66,7 +75,7 @@ const Prices = () => {
             height="24px"
           />
         </div>
-        <button className="price-button">Cadastrar-se</button>
+        <button className="price-button" onClick={handleStartClick}>Cadastrar-se</button>
       </div>
       <div className="card-prices">
         <p className="title-price">PLANO MENSAL</p>
@@ -226,7 +235,7 @@ const Prices = () => {
             height="24px"
           />
         </div>
-        <button className="price-button">Quero assinar</button>
+        <button className="price-button" onClick={handleStartClick}>Quero assinar</button>
 
       </div>
       <div className="card-prices">
@@ -387,7 +396,7 @@ const Prices = () => {
             height="24px"
           />
         </div>
-        <button className="price-button">Quero assinar</button>
+        <button className="price-button" onClick={handleStartClick}>Quero assinar</button>
 
       </div>
     </div>
