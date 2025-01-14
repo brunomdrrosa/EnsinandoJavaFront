@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import './WelcomePage.css';
 import VideoSlider from "../VideoSlider/VideoSlider";
 import { SiApachekafka, SiDocker, SiFlyway, SiGraphql, SiJunit5, SiLiquibase, SiMongodb, SiOpenapiinitiative, SiQuarkus, SiRabbitmq, SiSwagger } from "react-icons/si";
+import Image from "next/image";
 
 // Defina um tipo para as tecnologias
 type Technology = "MongoDB" | "JUnit" | "Flyway" | "Liquibase" | "Swagger" | "OpenAPI" | "Kafka" | "RabbitMQ" | "Docker" | "GraphQL" | "Quarkus";
@@ -186,29 +187,45 @@ const WelcomePage = () => {
   };
 
   return (
-    <div className="welcome-container">
-      <h1 className="welcome-title">
-        {firstName === "Usuário" ? "Seja bem-vindo!" : `Olá, ${firstName}!`}
-      </h1>
-      <h2 className="welcome-subtitle">Estas são as suas aulas disponíveis para assistir:</h2>
-      <VideoSlider videos={recentVideos} />
-      <h2 className="welcome-subtitle">Ao assinar você terá acesso as seguintes aulas:</h2>
-
-      <div className="technology-filter">
-        <div className="filter-icons">
-          {technologies.map((tech, index) => (
-            <button
-              key={index}
-              onClick={() => handleTechnologyChange(tech as Technology)}
-              className={`technology-button ${selectedTechnologies.includes(tech as Technology) ? 'active' : ''}`}
-            >
-              {iconMapping[tech as Technology]}
-            </button>
-          ))}
+    <>
+      <header className="header">
+          <Image
+            src="/logo.webp"
+            alt="Logo do Ensinando Java"
+            className="header-image"
+            width={400}
+            height={400}
+            unoptimized
+          />
+          <h1 className="header-text">Ensinando Java</h1>
+        <div className="subscribe-button">
+          <button>Assinar</button>
         </div>
+      </header>
+      <div className="welcome-container">
+        <h1 className="welcome-title">
+          {firstName === "Usuário" ? "Seja bem-vindo!" : `Olá, ${firstName}!`}
+        </h1>
+        <h2 className="welcome-subtitle">Estas são as suas aulas disponíveis para assistir:</h2>
+        <VideoSlider videos={recentVideos} />
+        <h2 className="welcome-subtitle">Ao assinar você terá acesso as seguintes aulas:</h2>
+
+        <div className="technology-filter">
+          <div className="filter-icons">
+            {technologies.map((tech, index) => (
+              <button
+                key={index}
+                onClick={() => handleTechnologyChange(tech as Technology)}
+                className={`technology-button ${selectedTechnologies.includes(tech as Technology) ? 'active' : ''}`}
+              >
+                {iconMapping[tech as Technology]}
+              </button>
+            ))}
+          </div>
+        </div>
+        <VideoSlider videos={filteredVideos} />
       </div>
-      <VideoSlider videos={filteredVideos} />
-    </div>
+    </>
   );
 };
 
