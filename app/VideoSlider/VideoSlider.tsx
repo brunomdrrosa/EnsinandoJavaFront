@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import './VideoSlider.css';
 
 interface Video {
@@ -18,7 +19,7 @@ const VideoSlider = ({ videos }: VideoSliderProps) => {
     <div className="video-slider">
       {videos.map((video, index) => (
         <div className={`video-card ${video.locked ? "locked" : ""}`} key={index}>
-          <img className="video-thumbnail" src={video.thumbnailUrl} alt={video.title} />
+          <Image className="video-thumbnail" src={video.thumbnailUrl} alt={video.title} width={300} height={200} unoptimized />
           <h3 className="video-title">{video.title}</h3>
           {video.progress !== null && !video.locked && (
             <div className="progress-bar">

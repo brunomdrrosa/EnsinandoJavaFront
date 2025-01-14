@@ -2,6 +2,7 @@
 
 import React from 'react';
 import './Header.css';
+import Image from 'next/image';
 
 const Header = () => {
   const scrollToFAQ = () => {
@@ -32,10 +33,13 @@ const Header = () => {
             <button className="learn-more-button" onClick={scrollToFAQ}>Saiba mais</button>
           </div>
         </div>
-        <img 
+        <Image 
           src="/logo.webp" 
           alt="Logo do Ensinando Java" 
           className="hero-image"
+          width={400}
+          height={400}
+          unoptimized
         />
       </div>
     </header>
