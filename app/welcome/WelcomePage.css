@@ -203,3 +203,9 @@
   font-size: 1.6rem;
   font-weight: 500;
 }
+
+@media (max-width: 600px) {
+  .header-text {
+    font-size: 1.2rem;
+  }
+}
