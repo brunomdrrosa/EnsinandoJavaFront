@@ -166,9 +166,9 @@ const WelcomePage = () => {
   ];
 
   const filteredVideos = selectedTechnologies.length > 0
-  ? allVideos.filter(video => selectedTechnologies.includes(video.technology))
-  : allVideos;
-  
+    ? allVideos.filter(video => selectedTechnologies.includes(video.technology))
+    : allVideos;
+
   const technologies = [...new Set(allVideos.map(video => video.technology))];
 
   const iconMapping: Record<Technology, JSX.Element> = {
@@ -187,7 +187,9 @@ const WelcomePage = () => {
 
   return (
     <div className="welcome-container">
-      <h1 className="welcome-title">Olá, {firstName}!</h1>
+      <h1 className="welcome-title">
+        {firstName === "Usuário" ? "Seja bem-vindo!" : `Olá, ${firstName}!`}
+      </h1>
       <h2 className="welcome-subtitle">Estas são as suas aulas disponíveis para assistir:</h2>
       <VideoSlider videos={recentVideos} />
       <h2 className="welcome-subtitle">Ao assinar você terá acesso as seguintes aulas:</h2>
