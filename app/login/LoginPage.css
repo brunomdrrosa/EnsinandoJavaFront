@@ -1,0 +1,141 @@
+
+/* Define o background geral */
+body {
+  background-color: #141318;
+  color: white;
+  margin: 0;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 100px auto;
+  padding: 40px;
+  background-color: #1f1e24;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 30px;
+  color: #ff9900;
+}
+
+label {
+  display: block;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border: 1px solid #333;
+  border-radius: 6px;
+  background-color: #252429;
+  color: white;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff9900;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+.submit-button:hover {
+  background-color: #e68a00;
+}
+
+.external-login-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.external-button {
+  width: 48%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.google-button {
+  background-color: #db4437;
+  color: white;
+}
+
+.github-button {
+  background-color: #333;
+  color: white;
+}
+
+.external-button:hover {
+  opacity: 0.9;
+}
+
+.toggle-button {
+  margin-top: 20px;
+  background-color: transparent;
+  border: none;
+  color: #ff9900;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.toggle-button:hover {
+  text-decoration: underline;
+}
+
+.login-form {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 700px) {
+  .login-container {
+    max-width: 700px;
+  }
+}
+
+.external-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 20px;
+  margin: 10px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+}
+
+.google-button {
+  background-color: #db4437;
+}
+
+.github-button {
+  background-color: #24292e;
+}
+
+.google-button:hover,
+.github-button:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 610px) {
+  .external-button {
+    flex-direction: column; /* Coloca ícones acima do texto */
+  }
+}

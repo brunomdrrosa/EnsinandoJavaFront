@@ -1,4 +1,3 @@
-import "./App.css";
 import Header from "./Header/Header";
 import StacksSection from "./StacksSection/StacksSection";
 import Advantages from "./Advantages/Advantages";

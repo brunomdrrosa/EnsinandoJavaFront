@@ -12,6 +12,10 @@
   }
 }
 
+.page-container {
+  background-color: #141318;
+}
+
 .learning-section {
   display: flex;
   justify-content: center;

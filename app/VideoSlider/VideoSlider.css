@@ -1,0 +1,54 @@
+/* VideoSlider.css */
+.video-slider {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.video-card {
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  max-width: 320px;
+  cursor: pointer;
+}
+
+.video-card.locked {
+  filter: grayscale(100%);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.video-thumbnail {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.video-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+.progress-bar {
+  background-color: #ddd;
+  border-radius: 8px;
+  height: 8px;
+  margin-top: 8px;
+}
+
+.progress {
+  background-color: #4caf50;
+  height: 100%;
+  border-radius: 8px;
+}
+
+/* Regras de mídia para telas menores */
+@media (max-width: 768px) {
+  .video-card {
+    width: 100%; /* Vídeos em linha única para telas menores */
+  }
+}
